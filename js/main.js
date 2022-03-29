@@ -5,7 +5,7 @@ const bet=document.querySelector('.js_bet')
 const sentence=document.querySelector('.js_sentence')
 const button=document.querySelector('.js_button')
 const balance= document.querySelector('.js_balance')
-
+const reset= ('.js_reset')
 
 
 function getRandomNumber(max) {
@@ -41,6 +41,24 @@ function handleClickbutton (event){
     console.log(balance);
     
   }
+
+  //bonus
+
+  if (balanceNum <= 0){
+
+      button.classList.add("hidden");
+      reset.classList.remove("hidden");
+
+  }
+
+  else if (balanceNum >=200){
+    button.classList.add("hidden");
+    reset.classList.remove("hidden");
+
+  }
+  
+  //balance.innerHTML= ""
+
 
 }
 //el evento
