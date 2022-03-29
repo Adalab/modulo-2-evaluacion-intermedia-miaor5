@@ -23,28 +23,21 @@ function handleClickbutton (event){
    
   const number= parseInt(optionDice.value)
   const betNum= parseInt (bet.value)
-  const balanceNum= parseInt(balance.value)
-
-//   console.log(betNum);
-//   console.log(balanceNum)
-
-  console.log(optionDice);
-  console.log(bet);
-  console.log(balance);
+  const balanceNum= parseInt(balance.innerHTML)
 
 
   if ( randNumber === number){
 
     sentence.innerHTML= "Has ganado el doble de lo apostado"
-   
+   console.log(betNum, balanceNum);
     balance.innerHTML= betNum * 2 + balanceNum;
-    console.log(betNum);
+   
 
   }
   else{
     sentence.innerHTML= "Has perdido lo apostado" 
     
-    balance.innerHTML=balanceNum;
+    balance.innerHTML=balanceNum-betNum;
     console.log(balance);
     
   }
